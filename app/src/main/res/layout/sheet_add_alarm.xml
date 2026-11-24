@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:id="@+id/tvSheetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nueva llamada"
+            android:textAppearance="?attr/textAppearanceTitleLarge"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <!-- Hora -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="HORA"
+            android:letterSpacing="0.08"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnSheetTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_chip"
+            android:backgroundTint="@color/app_bg"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:paddingVertical="14dp"
+            android:text="06:05 a. m."
+            android:textColor="@color/text_primary"
+            android:textSize="40sp" />
+
+        <!-- Contacto -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="A QUIÉN LLAMAR"
+            android:letterSpacing="0.08"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSheetPickContact"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="6dp"
+            android:text="Elegir de mis contactos"
+            app:icon="@drawable/ic_person" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSheetPhone"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="O escribe el número (con código de país)"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:placeholderText="+51 9XX XXX XXX">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSheetPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvSheetContactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawablePadding="6dp"
+            android:textColor="@color/brand"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!-- Tipo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="TIPO DE LLAMADA"
+            android:letterSpacing="0.08"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleSheetType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:checkedButton="@+id/btnTypeWhatsApp"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTypeWhatsApp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="WhatsApp"
+                app:icon="@drawable/ic_chat" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTypePhone"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="Línea normal"
+                app:icon="@drawable/ic_phone" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:id="@+id/tvSheetHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Para WhatsApp el número debe estar guardado en tus contactos."
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSheetSave"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="Programar llamada"
+            android:textColor="@color/on_brand"
+            android:textSize="16sp"
+            app:backgroundTint="@color/brand"
+            app:cornerRadius="16dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

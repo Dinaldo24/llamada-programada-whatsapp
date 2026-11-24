@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand">#5FD6B4</color>
+    <color name="on_brand">#00382D</color>
+    <color name="brand_container">#0F4F42</color>
+    <color name="on_brand_container">#B5F3DF</color>
+    <color name="accent">#25D366</color>
+    <color name="app_bg">#0E1412</color>
+    <color name="card_bg">#171F1D</color>
+    <color name="card_stroke">#26302D</color>
+    <color name="text_primary">#E3EAE7</color>
+    <color name="text_secondary">#A9B4B0</color>
+    <color name="text_muted">#7B8783</color>
+    <color name="ok_fg">#7FDBA2</color>
+    <color name="ok_bg">#163A26</color>
+    <color name="warn_fg">#FFC46B</color>
+    <color name="warn_bg">#3A2A0E</color>
+    <color name="err_fg">#FFB4AB</color>
+    <color name="err_bg">#4A1A16</color>
+    <color name="hero_bg">#124D41</color>
+    <color name="hero_text">#FFFFFF</color>
+    <color name="hero_sub">#A9DCCD</color>
+</resources>

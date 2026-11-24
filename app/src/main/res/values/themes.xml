@@ -1,0 +1,40 @@
+<resources>
+
+    <style name="Theme.AlarmaWhatsApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand</item>
+        <item name="colorOnPrimary">@color/on_brand</item>
+        <item name="colorPrimaryContainer">@color/brand_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_brand_container</item>
+        <item name="colorSecondaryContainer">@color/brand_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_brand_container</item>
+        <item name="colorSurface">@color/card_bg</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/card_stroke</item>
+        <item name="android:colorBackground">@color/app_bg</item>
+        <item name="android:windowBackground">@color/app_bg</item>
+        <item name="android:statusBarColor">@color/app_bg</item>
+        <item name="android:navigationBarColor">@color/app_bg</item>
+        <item name="android:windowLightStatusBar">@bool/light_bars</item>
+        <item name="android:windowLightNavigationBar">@bool/light_bars</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheet</item>
+    </style>
+
+    <!-- Hoja inferior "Nueva llamada" con el fondo de las tarjetas (sin el tinte lila por defecto) -->
+    <style name="ThemeOverlay.App.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.App.BottomSheet</item>
+    </style>
+
+    <style name="Widget.App.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/card_bg</item>
+    </style>
+
+    <!-- Tema transparente para CallTriggerActivity (no muestra UI, solo dispara la llamada) -->
+    <style name="Theme.Transparent" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>
